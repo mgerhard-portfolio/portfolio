@@ -5,7 +5,6 @@ import {
   MdOutlinePsychology,
 } from "react-icons/md";
 import TextBox from "../components/TextBox";
-import portfolioSelfPic from "../assets/portfolio-self-pic-background.png";
 
 function HomePage() {
   return (
