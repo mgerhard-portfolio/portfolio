@@ -1,12 +1,3 @@
-import {
-  MdOutlineCode,
-  MdOutlineDiversity1,
-  MdOutlineEngineering,
-  MdOutlinePsychology,
-} from "react-icons/md";
-import TextBox from "./TextBox";
-import Logo from "./Logo";
-
 export const DownloadTemplate = () => {
   return (
     <>

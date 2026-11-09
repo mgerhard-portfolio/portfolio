@@ -1,5 +1,3 @@
-import TextBox from "./TextBox";
-
 interface ResumeExperienceSectionProps {
   jobTitle: string;
   companyName: string;
