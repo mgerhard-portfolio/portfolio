@@ -7,14 +7,17 @@ import ProjectsPage from "./pages/ProjectsPage";
 import NavLink from "./components/NavLink";
 import Logo from "./components/Logo";
 import { MdBusinessCenter, MdCode, MdFolderOpen, MdHome } from "react-icons/md";
+import { DownloadButton } from "./components/DownloadButton";
 
 function App() {
   return (
     <BrowserRouter>
-      <header className="site-header flex items-center gap-6">
+      <header className="site-header flex print:hidden px-12 pt-12">
         <div className="flex flex-col gap-8 w-full">
-          <Logo title="Maxine Gerhard" to="/" />
-
+          <div className="flex justify-between">
+            <Logo title="Maxine Gerhard" to="/" />
+            <DownloadButton />
+          </div>
           <nav className="flex  site-nav" aria-label="Main navigation">
             <NavLink title="Home" to="/" icon={<MdHome />} />
             <NavLink
@@ -32,7 +35,7 @@ function App() {
         </div>
       </header>
 
-      <main className="page-content min-h-screen">
+      <main className="page-content min-h-screen print:hidden">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />

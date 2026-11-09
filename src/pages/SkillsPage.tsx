@@ -3,7 +3,7 @@ import TextBox from "../components/TextBox";
 function SkillsPage() {
   return (
     <section className="page">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 px-4 sm:px-12 md:px-32 lg:px-52">
         <TextBox
           heading="Frontend"
           text="React, Typescript, Tailwind CSS, HTML5, Material UI, Chakra UI"
@@ -14,7 +14,7 @@ function SkillsPage() {
         />
         <TextBox
           heading="Tools & Methodology"
-          text="Vite, Agile, AWS (EC2, Route53, Cloudfront, S3, Amplify), CI/CD, Figma (Prototypes to Code, AI), Git/GitHub, Google Gemini, VS Copilot"
+          text="Vite, Agile, AWS (EC2, Route53, Cloudfront, S3, Amplify), CI/CD, Figma (Prototype to Code & AI), Git/GitHub, Google Gemini, VS Copilot"
         />
         <TextBox
           heading="Data & Backend"

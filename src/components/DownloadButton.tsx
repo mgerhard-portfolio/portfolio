@@ -1,4 +1,5 @@
 import { MdFileDownload } from "react-icons/md";
+import { color } from "../theme/color-scheme";
 
 export const DownloadButton = () => {
   const handleExportPDF = (e: React.MouseEvent) => {
@@ -12,9 +13,13 @@ export const DownloadButton = () => {
       href="/Maxine_Gerhard_Resume.pdf"
       download="Maxine_Gerhard_Resume.pdf"
       onClick={handleExportPDF}
+      className={` text-2xl text-[${color.text}]`}
     >
-      Download
-      <MdFileDownload aria-hidden="true" />
+      {/* Download */}
+      <MdFileDownload
+        className="text-5xl border p-2 shrink-0 rounded-full"
+        aria-hidden="true"
+      />
     </a>
   );
 };
