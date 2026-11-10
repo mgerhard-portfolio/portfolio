@@ -5,6 +5,7 @@ interface TextBoxProps {
   subtitle?: string;
   text: string;
   icon?: ReactNode;
+  className?: string;
 }
 
 export default function TextBox({
@@ -12,9 +13,12 @@ export default function TextBox({
   subtitle,
   text,
   icon,
+  className,
 }: TextBoxProps) {
   return (
-    <div className="text-[#2C3E50] border-[#2C3E50] border p-6 rounded-md shadow-lg">
+    <div
+      className={`text-[#2C3E50] border-[#2C3E50] border p-6 rounded-md shadow-lg ${className ?? ""}`}
+    >
       {icon ? (
         <div className="flex items-center gap-6">
           {/* Icon Wrapper to keep it aligned at the top left */}

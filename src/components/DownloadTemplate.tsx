@@ -194,7 +194,7 @@ export const DownloadTemplate = () => {
               </div>
               <p className="project-name">
                 <a href="https://mgerhard.com/" target="_blank" rel="noopener">
-                  Personal Portfolio (https://mgerhard.com/)
+                  Maxine Gerhard UX Engineer (https://mgerhard.com/)
                 </a>
               </p>
               <ul>

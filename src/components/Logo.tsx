@@ -8,7 +8,7 @@ interface LogoProps {
 export default function Logo({ title, to }: LogoProps) {
   return (
     <Link
-      className="inline-flex flex-col items-center sm:items-start font-logo font-bold uppercase leading-none text-[#2c3e50] no-underline w-max"
+      className="site-logo inline-flex flex-col items-center sm:items-start font-logo font-bold uppercase leading-none text-[#2c3e50] no-underline w-max"
       to={to}
       aria-label={`${title}, UX Engineer`}
     >
