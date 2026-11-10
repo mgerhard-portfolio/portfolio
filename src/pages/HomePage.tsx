@@ -5,13 +5,24 @@ import {
   MdOutlinePsychology,
 } from "react-icons/md";
 import TextBox from "../components/TextBox";
+import { useContext } from "react";
+import { SettingsContext } from "../context/SettingsContext";
+import { color } from "../theme/color-scheme";
 
 function HomePage() {
+  const { darkMode } = useContext(SettingsContext);
   return (
     <section className="page">
-      <div className="text-3xl tracking-wide sm:text-2xl p-8 text-[#2c3e50]">
-        Hello World! I am a passionate UX Engineer and Software Developer
-        dedicated to creating intuitive and efficient digital experiences.
+      <div
+        className={`text-4xl tracking-wide sm:text-3xl px-8 pb-4 text-[${darkMode ? color.background : color.text}] max-w-[75%] mx-auto`}
+      >
+        Hello World!
+      </div>
+      <div
+        className={`text-3xl tracking-wide sm:text-2xl px-8 text-[${darkMode ? color.background : color.text}] max-w-[75%] mx-auto`}
+      >
+        I am a passionate UX Engineer and Software Developer dedicated to
+        creating intuitive and efficient digital experiences.
       </div>
       <div className="flex flex-col gap-4 justify-center md:p-8">
         <div className="flex flex-col md:flex-row gap-4">

@@ -16,7 +16,6 @@ export interface SettingsContextValue {
     text: string;
     hoverBackground: string;
     hoverText: string;
-    // textH: string;
     bg: string;
     border: string;
     codeBg: string;
@@ -28,8 +27,8 @@ export interface SettingsContextValue {
   };
 }
 
-export const SettingsContext = createContext<SettingsContextValue | undefined>(
-  undefined,
+export const SettingsContext = createContext<SettingsContextValue>(
+  {} as SettingsContextValue,
 );
 
 export function useSettings() {

@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { MdFileDownload } from "react-icons/md";
 import { color } from "../theme/color-scheme";
+import { SettingsContext } from "../context/SettingsContext";
 
 export const DownloadButton = () => {
+  const { darkMode } = useContext(SettingsContext);
   const handleExportPDF = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -13,7 +16,7 @@ export const DownloadButton = () => {
       href="/Maxine_Gerhard_Resume.pdf"
       download="Maxine_Gerhard_Resume.pdf"
       onClick={handleExportPDF}
-      className={` text-2xl text-[${color.text}]`}
+      className={` text-2xl text-[${darkMode ? color.background : color.text}]`}
     >
       {/* Download */}
       <MdFileDownload

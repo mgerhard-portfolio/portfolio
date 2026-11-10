@@ -3,7 +3,7 @@ import TextBox from "../components/TextBox";
 function SkillsPage() {
   return (
     <section className="page">
-      <div className="flex flex-col gap-4 px-4 sm:px-12 md:px-32 lg:px-52">
+      <div className="flex flex-col gap-4 px-8 ">
         <TextBox
           heading="Frontend"
           text="React, Typescript, Tailwind CSS, HTML5, Material UI, Chakra UI"

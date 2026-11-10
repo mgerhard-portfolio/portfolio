@@ -7,7 +7,13 @@ interface SettingsProviderProps {
 
 export function SettingsProvider({ children }: SettingsProviderProps) {
   const [colorBlindness, setColorBlindness] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+
+  const initialDarkMode =
+    typeof window !== "undefined" &&
+    (localStorage.getItem("darkMode") === "dark" ||
+      (!localStorage.getItem("darkMode") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches));
+  const [darkMode, setDarkMode] = useState<boolean>(initialDarkMode);
   const [hardOfVision, setHardOfVision] = useState(false);
 
   const primary = {
@@ -30,35 +36,19 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
         setDarkMode,
         hardOfVision,
         setHardOfVision,
-        colorScheme: darkMode
-          ? {
-              text: `text-[${neutral.cloud}]`,
-              hoverBackground: `hover:bg-[${primary.midnightBlue}]`,
-              hoverText: `hover:text-[${neutral.cloud}]`,
-              // textH: neutral.silver,
-              bg: `bg-[${primary.midnightBlue}]`,
-              border: `border-[${primary.slateBlue}]`,
-              codeBg: primary.slateBlue,
-              accent: "#0070f3",
-              accentBg: "#003366",
-              accentBorder: "#0070f3",
-              socialBg: primary.slateBlue,
-              shadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
-            }
-          : {
-              text: `text-[${primary.midnightBlue}]`,
-              hoverBackground: `hover:bg-[${primary.slateBlue}]`,
-              hoverText: `hover:text-[${neutral.cloud}]`,
-              // textH: primary.slateBlue,
-              bg: `bg-[${neutral.cloud}]`,
-              border: `border-[${neutral.silver}]`,
-              codeBg: neutral.cloud,
-              accent: "#0070f3",
-              accentBg: "#e6f0ff",
-              accentBorder: "#0070f3",
-              socialBg: neutral.cloud,
-              shadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-            },
+        colorScheme: {
+          text: `text-[${primary.midnightBlue}]`,
+          hoverBackground: `hover:bg-[${primary.slateBlue}]`,
+          hoverText: `hover:text-[${neutral.cloud}]`,
+          bg: `bg-[${neutral.cloud}]`,
+          border: `border-[${neutral.silver}]`,
+          codeBg: neutral.cloud,
+          accent: "#0070f3",
+          accentBg: "#e6f0ff",
+          accentBorder: "#0070f3",
+          socialBg: neutral.cloud,
+          shadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+        },
       }}
     >
       {children}
