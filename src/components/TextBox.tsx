@@ -6,7 +6,7 @@ import { color } from "../theme/color-scheme";
 interface TextBoxProps {
   heading?: string;
   subtitle?: string;
-  text: string;
+  children?: ReactNode;
   icon?: ReactNode;
   className?: string;
 }
@@ -14,8 +14,8 @@ interface TextBoxProps {
 export default function TextBox({
   heading,
   subtitle,
-  text,
   icon,
+  children,
   className,
 }: TextBoxProps) {
   const { darkMode } = useContext(SettingsContext);
@@ -25,10 +25,7 @@ export default function TextBox({
     >
       {icon ? (
         <div className="flex items-center gap-6">
-          {/* Icon Wrapper to keep it aligned at the top left */}
           <div className="shrink-0">{icon}</div>
-
-          {/* Content Wrapper for Heading and Text */}
           <div
             className={`text-left text-[${darkMode ? color.background : color.text}]`}
           >
@@ -36,14 +33,14 @@ export default function TextBox({
             {subtitle && (
               <h3 className={`text-lg font-semibold`}>{subtitle}</h3>
             )}
-            <p>{text}</p>
+            <p>{children}</p>
           </div>
         </div>
       ) : (
         <div className="text-left">
           {heading && <h2 className={`text-xl font-bold `}>{heading}</h2>}
           {subtitle && <h3 className={`text-lg font-semibold`}>{subtitle}</h3>}
-          <p>{text}</p>
+          <p>{children}</p>
         </div>
       )}
     </div>

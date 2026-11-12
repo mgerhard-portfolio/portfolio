@@ -29,7 +29,7 @@ function App() {
             </div>
           </div>
           <div className="hidden md:block">
-            <nav className="site-nav " aria-label="Main navigation">
+            <nav className="site-nav" aria-label="Main navigation">
               <NavLink title="Home" to="/" icon={<MdHome />} />
               <NavLink
                 title="Projects"
@@ -47,7 +47,7 @@ function App() {
         </div>
       </header>
 
-      <main className={`page-content min-h-screen print:hidden `}>
+      <main className={`page-content print:hidden `}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
