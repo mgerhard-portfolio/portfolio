@@ -3,11 +3,11 @@ import { FaAws } from "react-icons/fa";
 import { DiScrum } from "react-icons/di";
 import { GrDeploy } from "react-icons/gr";
 import { VscCopilot } from "react-icons/vsc";
-import TextBox from "./TextBox";
+import SideBarText from "./SideBarText";
 
 export default function ToolsAndMethodologySkillsList() {
   return (
-    <TextBox heading="Tools & Methodology">
+    <SideBarText heading="Tools & Methodology">
       <div className="flex flex-row justify-center gap-8">
         <div className="flex flex-col gap-1 items-center">
           <SiVite size={28} />
@@ -38,6 +38,6 @@ export default function ToolsAndMethodologySkillsList() {
           <div>VS Copilot</div>
         </div>
       </div>
-    </TextBox>
+    </SideBarText>
   );
 }

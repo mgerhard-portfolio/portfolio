@@ -8,7 +8,7 @@
 @layer base {
   :root {
     --text: #ecf0f1;
-    --text-h: #2c3e50;
+    /* --text-h: #2c3e50; */
     --bg: #ecf0f1;
     --border: #e5e4e7;
     --code-bg: #f4f3ec;
@@ -27,8 +27,7 @@
     letter-spacing: 0.18px;
     color-scheme: light dark;
     color: var(--text);
-    background: var(--bg);
-    background-image: var(--dynamic-bg, url("/background.jpg"));
+    background-color: var(--bg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -45,11 +44,6 @@
   .dynamic-bg {
     background-image: var(--bg-image, url("/background-dark-mode.jpg"));
   }
-  /* 
-  @media (prefers-color-scheme: dark) {
-  :root {
-    background-image: var(--bg-image, url("/background-dark-mode.jpg"));
-  } */
 
   #social .button-icon {
     filter: invert(1) brightness(2);
@@ -60,13 +54,7 @@
   width: 1126px;
   max-width: calc(100% - 32px);
   margin: 24px auto;
-  text-align: center;
-  /* border: 1px solid rgba(255, 255, 255, 0.55); */
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   min-height: calc(100svh - 48px);
   display: flex;
   flex-direction: column;
@@ -85,7 +73,6 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
 }
 
 h1 {
@@ -115,7 +102,6 @@ code,
   font-family: var(--mono);
   display: inline-flex;
   border-radius: 4px;
-  color: var(--text-h);
 }
 
 code {

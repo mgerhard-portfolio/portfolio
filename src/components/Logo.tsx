@@ -12,12 +12,22 @@ export default function Logo({ title, to }: LogoProps) {
   const { darkMode } = useContext(SettingsContext);
   return (
     <Link
-      className={`site-logo inline-flex flex-col items-center sm:items-start font-logo font-bold uppercase leading-none text-[${darkMode ? color.background : color.text}] no-underline w-max`}
+      className={`site-logo flex items-center gap-4 font-logo font-bold uppercase leading-none text-[${darkMode ? color.background : color.text}] no-underline w-max`}
       to={to}
-      aria-label={`${title}, UX Engineer`}
+      aria-label={`${title}, Software Engineer`}
     >
-      <span className="text-3xl tracking-wide sm:text-4xl">{title}</span>
-      <span className="mt-2 text-lg tracking-wide sm:text-xl">UX Engineer</span>
+      <img
+        src="/background.jpg"
+        alt="Maxine Gerhard Profile Picture"
+        className="size-24 rounded-full object-cover hidden lg:block"
+      />
+
+      <div className="flex flex-col">
+        <div className="text-3xl tracking-wide sm:text-4xl">{title}</div>
+        <div className="mt-2 text-lg tracking-wide sm:text-xl">
+          Software Engineer
+        </div>
+      </div>
     </Link>
   );
 }

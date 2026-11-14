@@ -10,13 +10,13 @@ export const DownloadTemplate = () => {
           <div className="flex flex-row justify-between">
             <div
               className="font-logo font-bold flex flex-col"
-              aria-label={`Maxine Gerhard, UX Engineer`}
+              aria-label={`Maxine Gerhard, Software Engineer`}
             >
               <div className="text-3xl tracking-wide sm:text-4xl">
                 Maxine Gerhard
               </div>
               <div className="mt-2 text-lg tracking-wide sm:text-xl">
-                UX Engineer
+                Software Engineer
               </div>
             </div>
             <ul className="text-right">
@@ -57,7 +57,7 @@ export const DownloadTemplate = () => {
         <main>
           <section id="summary" aria-label="Summary">
             <p className="p-4 pt-8">
-              UX Engineer with 8 years of software engineering experience
+              Software Engineer with 8 years of software engineering experience
               specializing in the intersection of user interface design and
               robust frontend implementation. Translating high-fidelity Figma
               prototypes into highly accessible, component-architected web
@@ -194,7 +194,7 @@ export const DownloadTemplate = () => {
               </div>
               <p className="project-name">
                 <a href="https://mgerhard.com/" target="_blank" rel="noopener">
-                  Maxine Gerhard UX Engineer (https://mgerhard.com/)
+                  Maxine Gerhard Software Engineer (https://mgerhard.com/)
                 </a>
               </p>
               <ul>

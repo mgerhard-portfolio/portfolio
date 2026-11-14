@@ -1,11 +1,11 @@
 import { SiFigma } from "react-icons/si";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
-import TextBox from "./TextBox";
+import SideBarText from "./SideBarText";
 
 export default function DesignSkillsList() {
   return (
-    <TextBox heading="Design">
+    <SideBarText heading="Design">
       <div className="flex flex-row justify-center gap-8">
         <div className="flex flex-col gap-1 items-center">
           <FaRegUser size={28} />
@@ -20,6 +20,6 @@ export default function DesignSkillsList() {
           <div>Figma</div>
         </div>
       </div>
-    </TextBox>
+    </SideBarText>
   );
 }

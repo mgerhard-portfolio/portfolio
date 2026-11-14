@@ -1,11 +1,11 @@
 import { SiApollographql, SiGraphql, SiPrisma } from "react-icons/si";
 import { FaCogs } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
-import TextBox from "./TextBox";
+import SideBarText from "./SideBarText";
 
 export default function DataAndBackendSkillsList() {
   return (
-    <TextBox heading="Data & Backend">
+    <SideBarText heading="Data & Backend">
       <div className="flex flex-row justify-center gap-8">
         <div className="flex flex-col gap-1 items-center">
           <SiApollographql size={28} />
@@ -28,6 +28,6 @@ export default function DataAndBackendSkillsList() {
           <div>REST</div>
         </div>
       </div>
-    </TextBox>
+    </SideBarText>
   );
 }

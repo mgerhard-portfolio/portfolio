@@ -17,22 +17,22 @@ export const DarkModeButton = () => {
     if (darkMode) {
       // Sets a global CSS custom property (--dynamic-bg) on the <html> element
       document.documentElement.style.setProperty(
-        "--dynamic-bg",
-        `url("/background-dark-mode.jpg")`,
+        "--bg",
+        `${darkMode ? color.text : color.background}`,
       );
-      document.documentElement.style.setProperty(
-        "--text-h",
-        `${darkMode ? color.background : color.text}`,
-      );
+      // document.documentElement.style.setProperty(
+      //   "--text-h",
+      //   `${darkMode ? color.background : color.text}`,
+      // );
     } else {
       document.documentElement.style.setProperty(
-        "--dynamic-bg",
-        `url("/background.jpg")`,
+        "--bg",
+        `${darkMode ? color.text : color.background}`,
       );
-      document.documentElement.style.setProperty(
-        "--text-h",
-        `${darkMode ? color.background : color.text}`,
-      );
+      // document.documentElement.style.setProperty(
+      //   "--text-h",
+      //   `${darkMode ? color.background : color.text}`,
+      // );
     }
   }, [darkMode]);
 

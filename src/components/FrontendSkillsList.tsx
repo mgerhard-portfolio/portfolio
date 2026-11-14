@@ -6,11 +6,11 @@ import {
   SiChakraui,
   SiReact,
 } from "react-icons/si";
-import TextBox from "./TextBox";
+import SideBarText from "./SideBarText";
 
 export default function FrontendSkillsList() {
   return (
-    <TextBox heading="Frontend">
+    <SideBarText heading="Frontend">
       <div className="flex flex-row justify-center gap-8">
         <div className="flex flex-col gap-1 items-center">
           <SiReact size={28} />
@@ -37,6 +37,6 @@ export default function FrontendSkillsList() {
           <div>Chakra UI</div>
         </div>
       </div>
-    </TextBox>
+    </SideBarText>
   );
 }

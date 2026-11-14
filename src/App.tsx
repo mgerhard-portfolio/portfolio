@@ -6,12 +6,19 @@ import SkillsPage from "./pages/SkillsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import NavLink from "./components/NavLink";
 import Logo from "./components/Logo";
-import { MdBusinessCenter, MdCode, MdFolderOpen, MdHome } from "react-icons/md";
+import {
+  MdBusinessCenter,
+  MdCode,
+  MdFolderOpen,
+  MdHome,
+  MdOutlinePerson,
+} from "react-icons/md";
 import { DownloadButton } from "./components/DownloadButton";
 import { DarkModeButton } from "./components/DarkModeButton";
 import { useContext } from "react";
 import { SettingsContext } from "./context/SettingsContext";
 import { color } from "./theme/color-scheme";
+import AboutMePage from "./pages/AboutMePage";
 
 function App() {
   const { darkMode } = useContext(SettingsContext);
@@ -42,17 +49,23 @@ function App() {
                 icon={<MdFolderOpen />}
               />
               <NavLink title="Skills" to="/skills" icon={<MdCode />} />
+              <NavLink
+                title="About Me"
+                to="/about"
+                icon={<MdOutlinePerson />}
+              />
             </nav>
           </div>
         </div>
       </header>
 
-      <main className={`page-content print:hidden `}>
+      <main className={`page-content print:hidden py-6 md:py-8`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/about" element={<AboutMePage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </main>

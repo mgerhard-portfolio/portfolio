@@ -1,9 +1,9 @@
 import { SiCypress, SiJest } from "react-icons/si";
-import TextBox from "./TextBox";
+import SideBarText from "./SideBarText";
 
 export default function TestingAndQASkillsList() {
   return (
-    <TextBox heading="Testing & QA">
+    <SideBarText heading="Testing & QA">
       <div className="flex flex-row justify-center gap-8">
         <div className="flex flex-col gap-1 items-center">
           <SiCypress size={28} />
@@ -14,6 +14,6 @@ export default function TestingAndQASkillsList() {
           <div>Jest</div>
         </div>
       </div>
-    </TextBox>
+    </SideBarText>
   );
 }

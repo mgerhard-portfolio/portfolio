@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { SettingsContext } from "../context/SettingsContext";
 import { color } from "../theme/color-scheme";
 
-interface TextBoxProps {
+interface SideBarTextProps {
   heading?: string;
   subtitle?: string;
   children?: ReactNode;
@@ -11,20 +11,24 @@ interface TextBoxProps {
   className?: string;
 }
 
-export default function TextBox({
+export default function SideBarText({
   heading,
   subtitle,
   icon,
   children,
   className,
-}: TextBoxProps) {
+}: SideBarTextProps) {
   const { darkMode } = useContext(SettingsContext);
   return (
     <div
-      className={`text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] border p-6 rounded-md shadow-lg ${className ?? ""}`}
+      className={`text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] p-6 ${className ?? ""}`}
     >
       {icon ? (
         <div className="flex items-center gap-6">
+          <div
+            className={`w-2 rounded-full self-stretch bg-[${darkMode ? color.background : color.text}]`}
+            aria-hidden="true"
+          />
           <div className="shrink-0">{icon}</div>
           <div
             className={`text-left text-[${darkMode ? color.background : color.text}]`}
@@ -39,7 +43,7 @@ export default function TextBox({
       ) : (
         <div className="text-left">
           {heading && <h2 className={`text-xl font-bold `}>{heading}</h2>}
-          {subtitle && <h3 className={`text-lg font-semibold`}>{subtitle}</h3>}
+          {subtitle && <h3 className={`text-lg font-semibold `}>{subtitle}</h3>}
           <p>{children}</p>
         </div>
       )}
