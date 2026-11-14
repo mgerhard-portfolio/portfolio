@@ -2,7 +2,6 @@ import Email from "../components/Email";
 import { useContext } from "react";
 import { SettingsContext } from "../context/SettingsContext";
 import { color } from "../theme/color-scheme";
-import DownloadResumeTextButton from "../components/DownloadResumeTextButton";
 
 function HomePage() {
   const { darkMode } = useContext(SettingsContext);
