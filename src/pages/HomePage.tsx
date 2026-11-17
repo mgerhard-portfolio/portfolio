@@ -1,22 +1,37 @@
-import Email from "../components/Email";
+import ContactSection from "../components/ContactSection";
 import { useContext } from "react";
 import { SettingsContext } from "../context/SettingsContext";
 import { color } from "../theme/color-scheme";
+import ProfileGirlDarkMode from "../components/ProfileGirlDarkMode";
 
 function HomePage() {
   const { darkMode } = useContext(SettingsContext);
   return (
     <section className="page">
-      <div className="pt-6 md:pt-8 flex flex-col gap-4">
-        <div className="flex flex-col md:flex-row gap-8">
-          <img
-            src="/background.jpg"
-            alt="Maxine Gerhard Profile Picture"
-            className="object-cover md:max-w-[60%] mx-auto rounded-lg  shadow-2xl"
+      <div className="flex flex-col gap-6 justify-center text-center items-center">
+        <div
+          className={`flex gap-2 text-3xl tracking-wide sm:text-3xl md:hidden text-[${darkMode ? color.background : color.text}] `}
+        >
+          <div>&lt;</div>
+          <div>Hello</div>
+          <div>World!</div>
+          <div>/&gt;</div>
+        </div>
+        {darkMode ? (
+          <ProfileGirlDarkMode
+            className="w-full lg:hidden -scale-x-100"
+            color={color.background}
           />
-          <div className="flex flex-col gap-4 items-center text-center md:items-end md:text-right">
+        ) : (
+          <ProfileGirlDarkMode
+            className="w-full lg:hidden -scale-x-100"
+            color={color.text}
+          />
+        )}
+        <div className="flex gap-4">
+          <div className="items-center flex flex-col gap-6 max-w-lg">
             <div
-              className={`flex gap-2 text-3xl tracking-wide sm:text-3xl pt-8 md:pt-0 text-[${darkMode ? color.background : color.text}] `}
+              className={`flex-row gap-2 text-3xl tracking-wide sm:text-3xl hidden md:flex text-[${darkMode ? color.background : color.text}] `}
             >
               <div>&lt;</div>
               <div>Hello</div>
@@ -24,18 +39,26 @@ function HomePage() {
               <div>/&gt;</div>
             </div>
             <div
-              className={`text-2xl tracking-wide sm:text-2xl text-[${darkMode ? color.background : color.text}] mx-auto pt-4`}
+              className={`text-2xl max-w-2xl tracking-wide sm:text-2xl text-[${darkMode ? color.background : color.text}]`}
             >
               I am a passionate Software Engineer dedicated to creating
               intuitive, accessible, and efficient digital experiences. I am
               currently seeking a UX Engineer role to bridge the gap between
               design and frontend architecture.
             </div>
-            <div className="pt-2 flex flex-col gap-6 items-center md:items-end">
-              <Email />
-              {/* <DownloadResumeTextButton /> */}
-            </div>
+            <ContactSection />
           </div>
+          {darkMode ? (
+            <ProfileGirlDarkMode
+              className="w-full hidden lg:flex -scale-x-100"
+              color={color.background}
+            />
+          ) : (
+            <ProfileGirlDarkMode
+              className="w-full hidden lg:flex -scale-x-100"
+              color={color.text}
+            />
+          )}
         </div>
       </div>
     </section>

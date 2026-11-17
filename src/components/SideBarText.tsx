@@ -21,7 +21,7 @@ export default function SideBarText({
   const { darkMode } = useContext(SettingsContext);
   return (
     <div
-      className={`text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] p-6 ${className ?? ""}`}
+      className={`text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] ${className ?? ""}`}
     >
       {icon ? (
         <div className="flex items-center gap-6">
@@ -41,7 +41,11 @@ export default function SideBarText({
           </div>
         </div>
       ) : (
-        <div className="text-left">
+        <div className="flex gap-6">
+          {/* <div
+            className={`w-1 rounded-full self-stretch bg-[${darkMode ? color.background : color.text}]`}
+            aria-hidden="true"
+          /> */}
           {heading && <h2 className={`text-xl font-bold `}>{heading}</h2>}
           {subtitle && <h3 className={`text-lg font-semibold `}>{subtitle}</h3>}
           <p>{children}</p>

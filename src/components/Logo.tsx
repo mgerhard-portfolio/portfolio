@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { SettingsContext } from "../context/SettingsContext";
 import { color } from "../theme/color-scheme";
+import ProfileGirl from "../components/ProfileGirl";
 
 interface LogoProps {
   title: string;
@@ -16,10 +17,9 @@ export default function Logo({ title, to }: LogoProps) {
       to={to}
       aria-label={`${title}, Software Engineer`}
     >
-      <img
-        src="/background.jpg"
-        alt="Maxine Gerhard Profile Picture"
-        className="size-24 rounded-full object-cover hidden lg:block"
+      <ProfileGirl
+        className="w-40 h-40 rounded-full object-cover hidden lg:block"
+        color={darkMode ? color.background : color.text}
       />
 
       <div className="flex flex-col">

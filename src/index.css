@@ -51,11 +51,8 @@
 }
 
 #root {
-  width: 1126px;
-  max-width: calc(100% - 32px);
-  margin: 24px auto;
   border-radius: 20px;
-  min-height: calc(100svh - 48px);
+  min-height: calc(100vh);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

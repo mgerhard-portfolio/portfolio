@@ -13,26 +13,24 @@ import {
   MdHome,
   MdOutlinePerson,
 } from "react-icons/md";
-import { DownloadButton } from "./components/DownloadButton";
 import { DarkModeButton } from "./components/DarkModeButton";
 import { useContext } from "react";
 import { SettingsContext } from "./context/SettingsContext";
 import { color } from "./theme/color-scheme";
-import AboutMePage from "./pages/AboutMePage";
+import AboutMePage from "./pages/AboutPage";
 
 function App() {
   const { darkMode } = useContext(SettingsContext);
   return (
     <BrowserRouter>
       <header
-        className={`flex print:hidden px-12 pt-12 text-[${darkMode ? color.background : color.text}]`}
+        className={`flex print:hidden px-12 pt-12 text-[${darkMode ? color.background : color.text}] `}
       >
-        <div className="flex flex-col gap-8 w-full">
-          <div className="flex justify-between">
+        <div className="flex flex-col gap-8 items-center w-full">
+          <div className="flex justify-between items-center w-full">
             <Logo title="Maxine Gerhard" to="/" />
-            <div className="flex items-start gap-2">
+            <div className="flex items-start gap-8">
               <DarkModeButton />
-              <DownloadButton />
             </div>
           </div>
           <div className="hidden md:block">
@@ -49,17 +47,13 @@ function App() {
                 icon={<MdFolderOpen />}
               />
               <NavLink title="Skills" to="/skills" icon={<MdCode />} />
-              <NavLink
-                title="About Me"
-                to="/about"
-                icon={<MdOutlinePerson />}
-              />
+              <NavLink title="About" to="/about" icon={<MdOutlinePerson />} />
             </nav>
           </div>
         </div>
       </header>
 
-      <main className={`page-content print:hidden py-6 md:py-8`}>
+      <main className={`page-content print:hidden pt-8 px-12 md:pt-10 m-auto`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
@@ -69,6 +63,7 @@ function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </main>
+      {/* <Footer backgroundImage="/background.jpg" /> */}
     </BrowserRouter>
   );
 }

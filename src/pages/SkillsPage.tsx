@@ -7,7 +7,7 @@ import ToolsAndMethodologySkillsList from "../components/ToolsAndMethodologySkil
 function SkillsPage() {
   return (
     <section className="page">
-      <div className="flex flex-col gap-4 px-8 ">
+      <div className="flex flex-col gap-16 px-8">
         <FrontendSkillsList />
         <DesignSkillsList />
         <ToolsAndMethodologySkillsList />

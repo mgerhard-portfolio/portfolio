@@ -6,13 +6,13 @@ import {
 } from "react-icons/md";
 import SideBarText from "../components/SideBarText";
 
-function AboutMePage() {
+function AboutPage() {
   return (
     <section className="page">
-      <div className="flex flex-col gap-4 justify-center">
+      <div className="flex flex-col gap-4 justify-center 2xl:max-w-[75%] mx-auto">
         <div className="flex flex-col md:flex-row gap-4">
           <SideBarText
-            className="md:w-[50%]"
+            className="md:w-[50%] p-6"
             icon={<MdOutlineEngineering size={32} />}
           >
             Software Engineer with 8 years of software engineering experience
@@ -20,7 +20,7 @@ function AboutMePage() {
             frontend implementation.
           </SideBarText>
           <SideBarText
-            className="md:w-[50%]"
+            className="md:w-[50%] p-6"
             icon={<MdOutlineCode size={32} />}
           >
             Translating high-fidelity Figma prototypes into highly accessible,
@@ -30,7 +30,7 @@ function AboutMePage() {
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           <SideBarText
-            className="md:w-[50%]"
+            className="md:w-[50%] p-6"
             icon={<MdOutlineDiversity1 size={32} />}
           >
             Experienced in collaborating across design and engineering teams to
@@ -38,7 +38,7 @@ function AboutMePage() {
             and ensure design fidelity.
           </SideBarText>
           <SideBarText
-            className="md:w-[50%]"
+            className="md:w-[50%] p-6"
             icon={<MdOutlinePsychology size={32} />}
           >
             Combining a user-centered design mindset with deep technical
@@ -50,4 +50,4 @@ function AboutMePage() {
   );
 }
 
-export default AboutMePage;
+export default AboutPage;
