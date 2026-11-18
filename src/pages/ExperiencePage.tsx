@@ -2,8 +2,8 @@ import { ResumeExperienceSection } from "../components/ResumeExperienceSection";
 
 function ExperiencePage() {
   return (
-    <section className="page">
-      <div className="flex flex-col gap-4 px-8 ">
+    <section className="page max-w-4xl">
+      <div className="flex flex-col gap-4 px-8">
         <ResumeExperienceSection
           jobTitle="Client Engineer"
           companyName="PENN INTERACTIVE"

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { SettingsContext } from "../context/SettingsContext";
 import { color } from "../theme/color-scheme";
-import ProfileGirl from "../components/ProfileGirl";
+import ProfileGirl from "./icons/ProfileGirl";
 
 interface LogoProps {
   title: string;

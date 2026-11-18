@@ -1,4 +1,4 @@
-export default function ProfileGirlDarkMode({
+export default function SilhouetteGirl({
   className,
   color,
 }: {

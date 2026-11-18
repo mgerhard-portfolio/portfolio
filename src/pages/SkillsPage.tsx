@@ -6,7 +6,7 @@ import ToolsAndMethodologySkillsList from "../components/ToolsAndMethodologySkil
 
 function SkillsPage() {
   return (
-    <section className="page">
+    <section className="page max-w-4xl">
       <div className="flex flex-col gap-16 px-8">
         <FrontendSkillsList />
         <DesignSkillsList />

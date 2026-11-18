@@ -5,11 +5,16 @@ import {
   MdOutlinePsychology,
 } from "react-icons/md";
 import SideBarText from "../components/SideBarText";
+import AboutMeGirl from "../components/icons/AboutMeGirl";
+import { color } from "../theme/color-scheme";
+import { SettingsContext } from "../context/SettingsContext";
+import { useContext } from "react";
 
 function AboutPage() {
+  const { darkMode } = useContext(SettingsContext);
   return (
-    <section className="page">
-      <div className="flex flex-col gap-4 justify-center 2xl:max-w-[75%] mx-auto">
+    <section className="page max-w-4xl">
+      <div className="flex flex-col mx-auto">
         <div className="flex flex-col md:flex-row gap-4">
           <SideBarText
             className="md:w-[50%] p-6"
@@ -28,6 +33,10 @@ function AboutPage() {
             Tailwind CSS, and AI tooling.
           </SideBarText>
         </div>
+        <AboutMeGirl
+          className="h-80 w-80 shrink-0 mx-auto rounded-full"
+          color={darkMode ? color.background : color.text}
+        />
         <div className="flex flex-col md:flex-row gap-4">
           <SideBarText
             className="md:w-[50%] p-6"

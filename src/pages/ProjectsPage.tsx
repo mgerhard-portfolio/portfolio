@@ -2,7 +2,7 @@ import SideBarText from "../components/SideBarText";
 
 function ProjectsPage() {
   return (
-    <section className="page flex flex-col">
+    <section className="page flex flex-col max-w-4xl">
       <div className="flex flex-col gap-4 px-8 ">
         <SideBarText
           heading="Personal Portfolio"

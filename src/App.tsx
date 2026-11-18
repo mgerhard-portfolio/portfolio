@@ -18,6 +18,8 @@ import { useContext } from "react";
 import { SettingsContext } from "./context/SettingsContext";
 import { color } from "./theme/color-scheme";
 import AboutMePage from "./pages/AboutPage";
+import { Footer } from "./components/Footer";
+import { MobileNav } from "./components/MobileNav";
 
 function App() {
   const { darkMode } = useContext(SettingsContext);
@@ -53,7 +55,7 @@ function App() {
         </div>
       </header>
 
-      <main className={`page-content print:hidden pt-8 px-12 md:pt-10 m-auto`}>
+      <main className={`page-content print:hidden pt-8 px-12 md:pt-12 m-auto`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
@@ -63,7 +65,8 @@ function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </main>
-      {/* <Footer backgroundImage="/background.jpg" /> */}
+      <Footer />
+      <MobileNav />
     </BrowserRouter>
   );
 }
