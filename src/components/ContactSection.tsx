@@ -23,7 +23,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/maxinegerhard/"
         >
-          https://www.linkedin.com/in/maxinegerhard/
+          linkedin.com/in/maxinegerhard
         </a>
       </div>
 
@@ -36,19 +36,19 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           href="https://github.com/mgerhard-portfolio"
         >
-          https://github.com/mgerhard-portfolio
+          github.com/mgerhard-portfolio
         </a>
       </div>
       <div className="flex gap-2">
         <p>
-          <b>Golden Toppers:</b>
+          <b>Featured Project:</b>
         </p>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.goldentoppers.com"
         >
-          https://www.goldentoppers.com
+          goldentoppers.com
         </a>
       </div>
     </div>

@@ -29,7 +29,7 @@ function App() {
         className={`flex print:hidden px-12 pt-12 text-[${darkMode ? color.background : color.text}] `}
       >
         <div className="flex flex-col gap-8 items-center w-full">
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-between items-start md:items-center w-full">
             <Logo title="Maxine Gerhard" to="/" />
             <div className="flex items-start gap-8">
               <DarkModeButton />
