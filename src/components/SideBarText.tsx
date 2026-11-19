@@ -29,7 +29,7 @@ export default function SideBarText({
             className={`w-2 rounded-full self-stretch bg-[${darkMode ? color.background : color.text}]`}
             aria-hidden="true"
           />
-          <div className="shrink-0">{icon}</div>
+          <div className="shrink-0 hidden md:flex">{icon}</div>
           <div
             className={`text-left text-[${darkMode ? color.background : color.text}]`}
           >
