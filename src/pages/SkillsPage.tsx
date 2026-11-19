@@ -20,7 +20,9 @@ function SkillsPage() {
           <div>Skills!</div>
           <div>/&gt;</div>
         </div>
-        <div className="flex flex-col gap-16 px-8">
+        <div
+          className={`flex flex-col gap-8 px-8 items-center text-center text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] border p-6 rounded-md shadow-lg`}
+        >
           <FrontendSkillsList />
           <DesignSkillsList />
           <ToolsAndMethodologySkillsList />

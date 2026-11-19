@@ -41,11 +41,7 @@ export default function SideBarText({
           </div>
         </div>
       ) : (
-        <div className="flex gap-6">
-          {/* <div
-            className={`w-1 rounded-full self-stretch bg-[${darkMode ? color.background : color.text}]`}
-            aria-hidden="true"
-          /> */}
+        <div className="flex flex-col gap-6">
           {heading && <h2 className={`text-xl font-bold `}>{heading}</h2>}
           {subtitle && <h3 className={`text-lg font-semibold `}>{subtitle}</h3>}
           <p>{children}</p>

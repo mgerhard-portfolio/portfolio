@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <header
-        className={`flex print:hidden px-12 pt-12 text-[${darkMode ? color.background : color.text}] `}
+        className={`flex print:hidden px-4 md:px-12 pt-12 text-[${darkMode ? color.background : color.text}] `}
       >
         <div className="flex flex-col gap-8 items-center w-full">
           <div className="flex justify-between items-start md:items-center w-full">
@@ -55,7 +55,9 @@ function App() {
         </div>
       </header>
 
-      <main className={`page-content print:hidden pt-8 px-12 md:pt-12 m-auto`}>
+      <main
+        className={`page-content print:hidden pt-8 px-4 md:px-12 md:pt-12 m-auto`}
+      >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
