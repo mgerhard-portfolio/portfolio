@@ -27,7 +27,7 @@ function ExperiencePage() {
           className="w-40 h-40 shrink-0 mx-auto"
           color={darkMode ? color.background : color.text}
         />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-16">
           {/* <WomenInTech
           className="w-40 h-40 shrink-0 mx-auto"
           color={darkMode ? color.background : color.text}

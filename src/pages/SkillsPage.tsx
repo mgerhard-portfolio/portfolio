@@ -17,7 +17,7 @@ function SkillsPage() {
         >
           <div>&lt;</div>
           <div>My</div>
-          <div>Skills!</div>
+          <div>Skills</div>
           <div>/&gt;</div>
         </div>
         <div

@@ -23,7 +23,7 @@ export const ResumeExperienceSection = ({
 
   return (
     <div
-      className={`text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] border p-6 rounded-md shadow-lg`}
+      className={`text-[${darkMode ? color.background : color.text}] border-[${darkMode ? color.background : color.text}] `}
     >
       <div className="flex justify-between">
         <div className="flex flex-col items-start">
