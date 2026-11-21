@@ -20,7 +20,7 @@ function SkillsPage() {
           <div>Skills</div>
           <div>/&gt;</div>
         </div>
-        <div className={`flex flex-col gap-8 px-8 items-center text-center`}>
+        <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8`}>
           <FrontendSkillsList />
           <DesignSkillsList />
           <ToolsAndMethodologySkillsList />
