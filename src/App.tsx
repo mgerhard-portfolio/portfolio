@@ -20,6 +20,7 @@ import { color } from "./theme/color-scheme";
 import AboutMePage from "./pages/AboutPage";
 import { Footer } from "./components/Footer";
 import { MobileNav } from "./components/MobileNav";
+import Gear from "./components/icons/Gear";
 
 function App() {
   const { darkMode } = useContext(SettingsContext);
@@ -28,6 +29,14 @@ function App() {
       <header
         className={`flex print:hidden px-4 md:px-12 md:pt-0 pt-4 text-[${darkMode ? color.background : color.text}] `}
       >
+        <Gear
+          className="fixed top-0 left-0 w-350 -translate-x-[30%] -translate-y-[30%] -z-10 pointer-events-none opacity-5"
+          color={darkMode ? color.background : color.text}
+        />
+        <Gear
+          className="fixed top-30 -right-100 -z-10 pointer-events-none opacity-10 w-250"
+          color={darkMode ? color.background : color.text}
+        />
         <div className="flex flex-col gap-8 items-center w-full">
           <div className="flex justify-between items-start md:items-center w-full">
             <Logo title="Maxine Gerhard" to="/" />

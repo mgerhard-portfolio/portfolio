@@ -14,7 +14,7 @@ export default function ProfileGirl({
       x="0px"
       y="0px"
       fill={color}
-      viewBox="0 100 500 400"
+      viewBox="0 0 750 750"
     >
       <g>
         <g>

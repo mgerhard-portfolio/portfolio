@@ -32,13 +32,15 @@ function AboutPage() {
         {activeColor === color.text ? (
           <AboutMeGirl
             className="h-56 w-56 shrink-0 mx-auto"
-            color={activeColor}
+            color={color.text}
           />
         ) : (
-          <FullProfileGirl
-            className="h-56 w-56 shrink-0 mx-auto -scale-x-100"
-            color={activeColor}
-          />
+          <div className="flex items-center justify-center w-56 h-56 rounded-full bg-[#ECF0F1] overflow-hidden p-2 shrink-0">
+            <AboutMeGirl
+              className="h-56 w-56 shrink-0 mx-auto"
+              color={color.text}
+            />
+          </div>
         )}
 
         {/* 2x2 Square Quadrant Grid */}
