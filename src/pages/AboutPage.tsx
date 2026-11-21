@@ -9,7 +9,6 @@ import AboutMeGirl from "../components/icons/AboutMeGirl";
 import { color } from "../theme/color-scheme";
 import { SettingsContext } from "../context/SettingsContext";
 import { useContext } from "react";
-import FullProfileGirl from "../components/icons/FullProfileGirl";
 
 function AboutPage() {
   const { darkMode } = useContext(SettingsContext);
