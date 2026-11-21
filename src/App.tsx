@@ -30,11 +30,11 @@ function App() {
         className={`flex print:hidden px-4 md:px-12 md:pt-0 pt-4 text-[${darkMode ? color.background : color.text}] `}
       >
         <Gear
-          className="fixed top-0 left-0 w-350 -translate-x-[30%] -translate-y-[30%] -z-10 pointer-events-none opacity-5"
+          className="fixed top-0 left-0 w-300 translate-x-[-30%] translate-y-[-30%] -z-10 pointer-events-none opacity-15"
           color={darkMode ? color.background : color.text}
         />
         <Gear
-          className="fixed top-30 -right-100 -z-10 pointer-events-none opacity-10 w-250"
+          className="fixed top-30 -right-100 -z-10 pointer-events-none opacity-15 w-250"
           color={darkMode ? color.background : color.text}
         />
         <div className="flex flex-col gap-8 items-center w-full">

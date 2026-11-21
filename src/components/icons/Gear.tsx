@@ -10,7 +10,7 @@ export default function Gear({
       version="1.1"
       width="2000"
       height="2000"
-      viewBox="0 0 2000 2000"
+      viewBox="100 0 1600 1600"
       className={className}
       fill={color}
       xmlns="http://www.w3.org/2000/svg"
