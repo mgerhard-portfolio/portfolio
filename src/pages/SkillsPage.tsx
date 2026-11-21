@@ -1,11 +1,7 @@
 import { useContext } from "react";
-import DataAndBackendSkillsList from "../components/DataAndBackendSkillsList";
-import DesignSkillsList from "../components/DesignSkillsList";
-import FrontendSkillsList from "../components/FrontendSkillsList";
-import TestingAndQASkillsList from "../components/TestingAndQASkillsList";
-import ToolsAndMethodologySkillsList from "../components/ToolsAndMethodologySkillsList";
 import { SettingsContext } from "../context/SettingsContext";
 import { color } from "../theme/color-scheme";
+import SkillsList from "../components/SkillsList";
 
 function SkillsPage() {
   const { darkMode } = useContext(SettingsContext);
@@ -21,11 +17,7 @@ function SkillsPage() {
           <div>/&gt;</div>
         </div>
         <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8`}>
-          <FrontendSkillsList />
-          <DesignSkillsList />
-          <ToolsAndMethodologySkillsList />
-          <DataAndBackendSkillsList />
-          <TestingAndQASkillsList />
+          <SkillsList />
         </div>
       </div>
     </section>
