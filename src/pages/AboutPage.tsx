@@ -36,7 +36,7 @@ function AboutPage() {
           />
         ) : (
           <FullProfileGirl
-            className="h-56 w-56 shrink-0 mx-auto"
+            className="h-56 w-56 shrink-0 mx-auto -scale-x-100"
             color={activeColor}
           />
         )}
