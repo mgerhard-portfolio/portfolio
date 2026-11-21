@@ -9,7 +9,11 @@ function ProjectsPage() {
   return (
     <section className="page flex flex-col max-w-4xl">
       <div className="flex flex-col gap-12">
-        <SideBarText heading="Personal Portfolio" link="https://mgerhard.com">
+        <SideBarText
+          heading="Personal Portfolio"
+          link="https://mgerhard.com"
+          link2="https://github.com/mgerhard-portfolio/portfolio"
+        >
           A clean, responsive portfolio built to showcase my transition from
           frontend engineering into UX engineering. Designed and developed from
           scratch with React, TypeScript, and Tailwind CSS. Focused on clear
@@ -31,6 +35,7 @@ function ProjectsPage() {
         <SideBarText
           heading="GoldenToppers.com"
           link="https://goldentoppers.com"
+          link2="https://github.com/goldentoppers/golden-toppers"
         >
           An independent web project built with a warm, welcoming, and grounded
           user experience. Created and maintained end-to-end, covering layout

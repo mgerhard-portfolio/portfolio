@@ -1,36 +1,68 @@
-# React + TypeScript + Vite
+# Maxine Gerhard — UX Engineering Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio website built to showcase frontend architecture, UI implementation, and UX design work.
 
-Currently, two official plugins are available:
+**Live Site:** [mgerhard.com](https://mgerhard.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project serves as a central hub for my transition from frontend software engineering into UX engineering. The site is designed with a focus on clean visual hierarchy, accessible navigation, and maintainable component architecture.
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Framework:** React + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router
+- **Linting:** Oxlint
+- **Hosting & CI/CD:** AWS Amplify
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Key Features & Focus Areas
+
+- **Component-Driven Architecture:** Modular, reusable UI sections built with strict TypeScript typing.
+- **Responsive Layout:** Adaptive grid layouts and navigation structured for clarity across desktop and mobile viewports.
+- **Design-to-Code Execution:** Custom SVG integration, intentional spacing, and a cohesive color palette (`#2C3E50` primary).
+
+## Getting Started
+
+To run this project locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com
+   cd portfolio
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## Deployment
+
+This repository is connected to **AWS Amplify** for continuous deployment. Pushing updates to the main branch automatically triggers a Vite production build and deploys to [mgerhard.com](https://mgerhard.com).
+
+## Project Structure
+
+```text
+src/
+├── assets/        # Static images, patterns, and SVGs
+├── components/    # Reusable UI components and navigation
+├── pages/         # Route-level views
+└── App.tsx        # Main application layout and routing
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
-
-# portfolio
-
-Portfolio Site for Maxine Gerhard

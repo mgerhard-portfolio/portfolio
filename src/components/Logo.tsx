@@ -17,7 +17,9 @@ export default function Logo({ title, to }: LogoProps) {
       to={to}
       aria-label={`${title}, Software Engineer`}
     >
-      <div className="hidden lg:flex items-center justify-center w-36 h-36 rounded-full bg-[#ECF0F1] overflow-hidden p-2 shrink-0">
+      <div
+        className={`hidden lg:flex items-center justify-center w-36 h-36 rounded-full bg-[${darkMode ? color.background : "none"}] overflow-hidden p-2 shrink-0`}
+      >
         <ProfileGirl
           className="w-44 h-44 rounded-full object-cover hidden lg:block"
           color={color.text}
