@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <header
-        className={`flex print:hidden px-4 md:px-12 pt-12 text-[${darkMode ? color.background : color.text}] `}
+        className={`flex print:hidden px-4 md:px-12 md:pt-0 pt-4 text-[${darkMode ? color.background : color.text}] `}
       >
         <div className="flex flex-col gap-8 items-center w-full">
           <div className="flex justify-between items-start md:items-center w-full">

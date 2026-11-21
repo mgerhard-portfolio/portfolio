@@ -9,6 +9,7 @@ import AboutMeGirl from "../components/icons/AboutMeGirl";
 import { color } from "../theme/color-scheme";
 import { SettingsContext } from "../context/SettingsContext";
 import { useContext } from "react";
+import FullProfileGirl from "../components/icons/FullProfileGirl";
 
 function AboutPage() {
   const { darkMode } = useContext(SettingsContext);
@@ -28,11 +29,17 @@ function AboutPage() {
           <div>/&gt;</div>
         </div>
 
-        {/* Center Avatar Below Title */}
-        <AboutMeGirl
-          className="h-56 w-56 shrink-0 mx-auto rounded-full"
-          color={activeColor}
-        />
+        {activeColor === color.text ? (
+          <AboutMeGirl
+            className="h-56 w-56 shrink-0 mx-auto"
+            color={activeColor}
+          />
+        ) : (
+          <FullProfileGirl
+            className="h-56 w-56 shrink-0 mx-auto"
+            color={activeColor}
+          />
+        )}
 
         {/* 2x2 Square Quadrant Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">

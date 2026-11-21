@@ -4,11 +4,17 @@ import { DiScrum } from "react-icons/di";
 import { GrDeploy } from "react-icons/gr";
 import { VscCopilot } from "react-icons/vsc";
 import SideBarText from "./SideBarText";
+import { color } from "../theme/color-scheme";
+import { SettingsContext } from "../context/SettingsContext";
+import { useContext } from "react";
 
 export default function ToolsAndMethodologySkillsList() {
+  const { darkMode } = useContext(SettingsContext);
   return (
-    <SideBarText heading="Tools & Methodology">
-      <div className="flex flex-row justify-center gap-8">
+    <SideBarText heading="Tools">
+      <div
+        className={`grid grid-cols-2 md:grid-cols-3 gap-4 border border-[${darkMode ? color.background : color.text}] rounded-md p-4 shadow-md`}
+      >
         <div className="flex flex-col gap-1 items-center">
           <SiVite size={28} />
           <div>Vite</div>
@@ -27,15 +33,15 @@ export default function ToolsAndMethodologySkillsList() {
         </div>
         <div className="flex flex-col gap-1 items-center">
           <SiGit size={28} />
-          <div>Git/GitHub</div>
+          <div>Git</div>
         </div>
         <div className="flex flex-col gap-1 items-center">
           <SiGooglegemini size={28} />
-          <div>Google Gemini</div>
+          <div>Gemini</div>
         </div>
         <div className="flex flex-col gap-1 items-center">
           <VscCopilot size={28} />
-          <div>VS Copilot</div>
+          <div>Copilot</div>
         </div>
       </div>
     </SideBarText>
