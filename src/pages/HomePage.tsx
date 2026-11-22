@@ -35,8 +35,8 @@ function HomePage() {
           >
             I am a passionate Software Engineer dedicated to creating intuitive,
             accessible, and efficient digital experiences. I am currently
-            seeking a UX Engineer role to bridge the gap between design and
-            frontend architecture.
+            seeking a Frontend or UX Engineer role to bridge the gap between
+            design and frontend architecture.
           </div>
           <ContactSection />
         </div>

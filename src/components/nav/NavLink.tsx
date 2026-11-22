@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { SettingsContext } from "../context/SettingsContext";
+import { SettingsContext } from "../../context/SettingsContext";
 
 interface NavLinkProps {
   title: string;
@@ -13,7 +13,7 @@ export default function NavLink({ title, to, icon }: NavLinkProps) {
   const location = useLocation();
   const isActive = location.pathname === to;
 
-  const { darkMode } = useContext(SettingsContext);
+  const darkMode = useContext(SettingsContext).darkMode;
 
   return (
     <Link

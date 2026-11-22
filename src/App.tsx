@@ -4,7 +4,7 @@ import "./App.css";
 import ExperiencePage from "./pages/ExperiencePage";
 import SkillsPage from "./pages/SkillsPage";
 import ProjectsPage from "./pages/ProjectsPage";
-import NavLink from "./components/NavLink";
+import NavLink from "./components/nav/NavLink";
 import Logo from "./components/Logo";
 import {
   MdBusinessCenter,
@@ -19,7 +19,7 @@ import { SettingsContext } from "./context/SettingsContext";
 import { color } from "./theme/color-scheme";
 import AboutMePage from "./pages/AboutPage";
 import { Footer } from "./components/Footer";
-import { MobileNav } from "./components/MobileNav";
+import { MobileNav } from "./components/nav/MobileNav";
 import Gear from "./components/icons/Gear";
 
 function App() {
